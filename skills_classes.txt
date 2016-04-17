@@ -1,0 +1,32 @@
+
+1. The 3 main advantages of OOP are:
+
+    a. Encapsulation -- keeps data and functions which act on that data close 
+    together; makes code easier to read and understand
+
+    b. Abstraction -- dont need to know the info/arguments that a function uses 
+    internally. For example, when I instantiate the Cat class and call speak on 
+    the cat instance, all I need to pass in is the cat's name. I don't need to
+    know what cats say, for example. 
+
+    c. Concision -- I can make different types of things without duplicating
+    my code over and over. For example, I can make a Cat class and a Dog class 
+    without defining the speak method twice. 
+
+2. A class is a type of object which can have various attributes and methods. 
+
+3. An instance attribute is an attribute which belongs to a single instance of 
+a class. For two different instances, the instance attributes are usually 
+different. 
+
+4. A method is a function that can only be called on a specific class. 
+
+5. An instance is a singular occurence of a class (aka an instantiation of 
+a class, but that's bit tautological.)
+
+6. A class attribute is an attribute that applies to a whole class. For example, 
+all cats have two eyes, so having two eyes should be a class attribute. An 
+instance attribute applies to a single instantiation of a class. For example, 
+all cats have different names, so the attribute self.name should be an instance
+attribute. 
+
