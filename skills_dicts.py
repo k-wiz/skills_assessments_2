@@ -231,11 +231,20 @@ def get_sum_zero_pairs(numbers):
         [[-1, 1], [0, 0]]
     """
 
-    
-    """NOTE: TRIED THIS FUNCTION MANY DIFFERENT WAYS; COULDN'T FOR THE LIFE 
-    OF ME FIGURE OUT HOW TO DO IT USING A DICTIONARY OR SET."""
 
-    return []
+    def get_sum_zero_pairs(num_list, total):
+    """NOTE: figured out a different way to do it that doesn't exactly align
+    with instructions. Couldn't figure out a way using dicts/sets using just 
+    a list as input."""
+    
+    uniq_num_list = set()
+
+    for num in num_list:
+        if num in uniq_num_list:
+            print total - num, num
+            #break
+        else:
+            uniq_num_list.add(total-num)
 
 
 def kids_game(names):
