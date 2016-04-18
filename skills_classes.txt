@@ -9,9 +9,8 @@
     the cat instance, all I need to pass in is the cat's name. I don't need to
     know what cats say, for example. 
 
-    c. Concision -- I can make different types of things without duplicating
-    my code over and over. For example, I can make a Cat class and a Dog class 
-    without defining the speak method twice. 
+    c. Polymorphism -- a method or a function can handle different types of 
+    input, e.g. strings vs. integers.  
 
 2. A class is a type of object which can have various attributes and methods. 
 

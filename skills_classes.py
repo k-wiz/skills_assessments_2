@@ -56,6 +56,31 @@ class Exam(object):
         return score
 
 
+class Quiz(Exam):
+
+    # def administer(self):
+    #     super(Quiz, self).administer()
+
+    def administer(self):
+        """ Administers exam, returns True if user passed, False if 
+        user failed."""
+     
+        score = 0
+        questions = 0
+
+        for question in self.questions:
+            questions += 1
+            if question.ask_and_evaluate():
+                score += 1
+
+        percentage_score = float(score / questions)
+        if percentage_score >= .5:
+            return True
+        else:
+            return False
+
+
+
 
 def take_test(exam, student):
     """Administers the exam, assigns the score to the student instance
@@ -83,6 +108,7 @@ def example():
 
 
 
+
 # kelli = Student("kelli", "wisuri", "8 Admiral Dr.")
 
 # midterm = Exam("midterm")
@@ -90,6 +116,8 @@ def example():
 # question1 = Question("Who wrote python?", "Guido van Rossum")
 
 # question2 = Question("What's the best color?", "green")
+
+# quiz1 = Quiz("quiz1")
 
 
 
