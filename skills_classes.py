@@ -36,7 +36,7 @@ class Exam(object):
 
 
     def add_question(self, question, correct_answer):
-        """Note: I don't feel good about the way add_question and the  Question
+        """Note: I don't feel good about the way add_question and the Question
         class relate (or fail to relate) to each other, but I wasn't sure how
         to fix it. 
         """
