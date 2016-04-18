@@ -15,19 +15,15 @@ class Question(object):
         self.correct_answer = correct_answer
 
     def ask_and_evaluate(self):
+        """Asks question and evaluates whether user-provided answer
+        is correct. """
 
-
-
-        #print self.question
-        #print self.correct_answer
+        print self.question
         user_answer = raw_input(">> ")
-        #print user_answer
         if user_answer == self.correct_answer:
             return True
         else:
             return False
-
-
 
 
 class Exam(object):
@@ -40,16 +36,64 @@ class Exam(object):
 
 
     def add_question(self, question, correct_answer):
+        """Note: I don't feel good about the way add_question and the  Question
+        class relate (or fail to relate) to each other, but I wasn't sure how
+        to fix it. 
+        """
 
-        self.questions.append(question)
+        new_question = Question(question, correct_answer)
+        self.questions.append(new_question)
+
+
+
+    def administer(self):
+        """ Administers exam, returns user's score."""
+        
+        score = 0
+        for question in self.questions:
+            if question.ask_and_evaluate():
+                score += 1
+        return score
+
+
+
+def take_test(exam, student):
+    """Administers the exam, assigns the score to the student instance
+    in a new attribute called score. """
+
+
+    score = exam.administer()
+    student.score = score
+
+
+def example():
+
+    """Don't fully understand what's being asked here.
+    Runs, but doesn't return a value. """
+
+    midterm = Exam("midterm")
+    midterm.add_question("Who wrote python?", "Guido van Rossum")
+    midterm.add_question("What's the best color?", "green")
+    kelli = Student("kelli", "wisuri", "8 Admiral Dr.")
+
+    print take_test(midterm, kelli)
 
 
 
 
 
-kelli = Student("kelli", "wisuri", "8 Admiral Dr.")
 
-midterm = Exam("midterm")
+# kelli = Student("kelli", "wisuri", "8 Admiral Dr.")
+
+# midterm = Exam("midterm")
+
+# question1 = Question("Who wrote python?", "Guido van Rossum")
+
+# question2 = Question("What's the best color?", "green")
+
+
+
+
 
 
 
