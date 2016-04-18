@@ -68,15 +68,15 @@ def take_test(exam, student):
 
 def example():
 
-    """Don't fully understand what's being asked here.
-    Runs, but doesn't return a value. """
+    """Creates an exam; adds questions to exam; creates a student; 
+    administers test to student; prints student's score. """
 
     midterm = Exam("midterm")
     midterm.add_question("Who wrote python?", "Guido van Rossum")
     midterm.add_question("What's the best color?", "green")
     kelli = Student("kelli", "wisuri", "8 Admiral Dr.")
 
-    print take_test(midterm, kelli)
+    print "%s's score is %s." % (kelli.first_name, kelli.score)
 
 
 
